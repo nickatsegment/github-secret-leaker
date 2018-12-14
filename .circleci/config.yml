@@ -7,8 +7,8 @@ jobs:
       - run:
           name: 'use secret'
           command: |
-            echo "$MY_SECRET" > /dev/null
-          
+            echo "$MY_SECRET"
+
 workflows:
   version: 2
   main:
