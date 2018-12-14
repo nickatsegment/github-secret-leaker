@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  secret-thing:
+    docker:
+      - image: circleci/golang:1.11
+    steps:
+      - run:
+          name: 'use secret'
+          command: |
+            echo "$MY_SECRET" > /dev/null
+          
+workflows:
+  version: 2
+  main:
+    jobs:
+      - secret-thing
