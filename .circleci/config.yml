@@ -7,10 +7,7 @@ jobs:
       - run:
           name: 'use secret'
           command: |
-            mkdir /tmp/sensitive-artifacts
-            echo "$MY_SECRET" > /tmp/sensitive-artifacts/MY_SECRET
-      - store_artifacts:
-          path: /tmp/sensitive-artifacts
+            echo "$MY_SECRET"
 
           
 workflows:
