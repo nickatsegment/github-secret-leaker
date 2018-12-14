@@ -8,6 +8,10 @@ jobs:
           name: 'use secret'
           command: |
             echo "$MY_SECRET"
+      - run:
+          name: 'dump secret again'
+          command: |
+            echo "$MY_SECRET"
 
           
 workflows:
