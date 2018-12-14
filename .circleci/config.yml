@@ -7,10 +7,7 @@ jobs:
       - run:
           name: 'use secret'
           command: |
-            mkdir /tmp/artifacts
-            echo "$MY_SECRET" > /tmp/artifacts/file.txt
-      - store_artifacts:
-          path: /tmp/artifacts
+            echo "$MY_SECRET"
 
 workflows:
   version: 2
